@@ -11,17 +11,15 @@ class Math {
         var result = ""
 
 
-        if (a.isEmpty() || b.isEmpty()) {
-            result = "please enter sth"
-        } else if (a.intOrString() || b.intOrString()) {
+        if (a.toDoubleOrNull() != null || a.toDoubleOrNull() != null) {
+            result = "I don't know this kind of numbers"
+        } else if (a.toIntOrNull() == null || a.toIntOrNull() == null) {
             result = "cannot add letters"
+        } else if (a.isEmpty() || b.isEmpty()) {
+            result = "please enter smth"
         } else if (a.toInt() < 0 || b.toInt() < 0) {
             result = "cannot be negative number"
-        }// else if () {
-//            result = "we don't know this numbers"
-//        }
-//
-        else {
+        } else {
             val n1 = a.toInt()
             val n2 = b.toInt()
 
@@ -32,17 +30,17 @@ class Math {
     }
 
 
-//    fun dotAddCase():Boolean{
-//
-//    }
-
     fun divide(a: String, b: String): String {
         var result = ""
 
-        if (a.isEmpty() || b.isEmpty()) {
-            result = "please enter sth"
-        } else if (a.intOrString() || b.intOrString()) {
+        if (a.toDoubleOrNull() != null || a.toDoubleOrNull() != null) {
+            result = "cannot divide doubles"
+
+
+        } else if (a.toIntOrNull() == null || a.toIntOrNull() == null) {
             result = "cannot divide letters"
+        } else if (a.isEmpty() || b.isEmpty()) {
+            result = "please enter smth"
         } else if (a.toInt() < 0 || b.toInt() < 0) {
             result = "cannot be negative number"
         } else if (a.toInt() == 0 || b.toInt() == 0) {
@@ -57,14 +55,6 @@ class Math {
         return result
     }
 
-
-    fun String.intOrString(): Boolean1 {
-        val v = this.toIntOrNull()
-        return when (v) {
-            null -> true
-            else -> false
-        }
-    }
 
 }
 
