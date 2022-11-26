@@ -11,7 +11,12 @@ class Math {
         var result = ""
 
 
-        if (a.toDoubleOrNull() != null || b.toDoubleOrNull() != null) {
+        if (a.toIntOrNull() != null || b.toIntOrNull() != null) {
+            val num1 = a.toInt()
+            val num2 = b.toInt()
+            result = (num1 + num2).toString()
+        }
+       else if (a.toDoubleOrNull() != null || b.toDoubleOrNull() != null) {
             result = (a.toDouble()+b.toDouble()).toString()
         } else if (a.toIntOrNull() == null || b.toIntOrNull() == null) {
             result = "cannot add letters"
@@ -32,8 +37,12 @@ class Math {
 
     fun divide(a: String, b: String): String {
         var result = ""
-
-        if (a.toDoubleOrNull() != null || b.toDoubleOrNull() != null) {
+        if (a.toIntOrNull() != null || b.toIntOrNull() != null) {
+            val num1 = a.toInt()
+            val num2 = b.toInt()
+            result = (num1 / num2).toString()
+        }
+        else if (a.toDoubleOrNull() != null || b.toDoubleOrNull() != null) {
             result = (a.toDouble()/b.toDouble()).toString()
 
         } else if (a.toIntOrNull() == null || b.toIntOrNull() == null) {
