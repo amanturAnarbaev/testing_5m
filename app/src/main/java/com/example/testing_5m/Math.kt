@@ -11,9 +11,9 @@ class Math {
         var result = ""
 
 
-        if (a.toDoubleOrNull() != null || a.toDoubleOrNull() != null) {
-            result = "I don't know this kind of numbers"
-        } else if (a.toIntOrNull() == null || a.toIntOrNull() == null) {
+        if (a.toDoubleOrNull() != null || b.toDoubleOrNull() != null) {
+            result = (a.toDouble()+b.toDouble()).toString()
+        } else if (a.toIntOrNull() == null || b.toIntOrNull() == null) {
             result = "cannot add letters"
         } else if (a.isEmpty() || b.isEmpty()) {
             result = "please enter smth"
@@ -33,11 +33,10 @@ class Math {
     fun divide(a: String, b: String): String {
         var result = ""
 
-        if (a.toDoubleOrNull() != null || a.toDoubleOrNull() != null) {
-            result = "cannot divide doubles"
+        if (a.toDoubleOrNull() != null || b.toDoubleOrNull() != null) {
+            result = (a.toDouble()/b.toDouble()).toString()
 
-
-        } else if (a.toIntOrNull() == null || a.toIntOrNull() == null) {
+        } else if (a.toIntOrNull() == null || b.toIntOrNull() == null) {
             result = "cannot divide letters"
         } else if (a.isEmpty() || b.isEmpty()) {
             result = "please enter smth"
