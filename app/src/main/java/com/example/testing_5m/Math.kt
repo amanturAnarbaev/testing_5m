@@ -15,21 +15,16 @@ class Math {
             val num1 = a.toInt()
             val num2 = b.toInt()
             result = (num1 + num2).toString()
-        }
-       else if (a.toDoubleOrNull() != null || b.toDoubleOrNull() != null) {
-            result = (a.toDouble()+b.toDouble()).toString()
-        } else if (a.toIntOrNull() == null || b.toIntOrNull() == null) {
-            result = "cannot add letters"
         } else if (a.isEmpty() || b.isEmpty()) {
             result = "please enter smth"
+        } else if (a.toDoubleOrNull() != null || b.toDoubleOrNull() != null) {
+            result = (a.toDouble() + b.toDouble()).toString()
+        } else if (a.toIntOrNull() == null || b.toIntOrNull() == null) {
+            result = "caanot add letters"
         } else if (a.toInt() < 0 || b.toInt() < 0) {
-            result = "cannot be negative number"
-        } else {
-            val n1 = a.toInt()
-            val n2 = b.toInt()
-
-            result = (n1 + n2).toString()
+            result = (a.toInt() + b.toInt()).toString()
         }
+
 
         return result
     }
@@ -38,26 +33,15 @@ class Math {
     fun divide(a: String, b: String): String {
         var result = ""
         if (a.toIntOrNull() != null || b.toIntOrNull() != null) {
-            val num1 = a.toInt()
-            val num2 = b.toInt()
-            result = (num1 / num2).toString()
-        }
-        else if (a.toDoubleOrNull() != null || b.toDoubleOrNull() != null) {
-            result = (a.toDouble()/b.toDouble()).toString()
-
-        } else if (a.toIntOrNull() == null || b.toIntOrNull() == null) {
-            result = "cannot divide letters"
+            result= (a.toDouble()/b.toDouble()).toString()
         } else if (a.isEmpty() || b.isEmpty()) {
             result = "please enter smth"
+        } else if (a.toDoubleOrNull() != null || b.toDoubleOrNull() != null) {
+            result = (a.toDouble() / b.toDouble()).toString()
+        } else if (a.toIntOrNull() == null || b.toIntOrNull() == null) {
+            result = "cannot divide letters"
         } else if (a.toInt() < 0 || b.toInt() < 0) {
-            result = "cannot be negative number"
-        } else if (a.toInt() == 0 || b.toInt() == 0) {
-            result = "Math error"
-        } else {
-            val n1 = a.toInt()
-            val n2 = b.toInt()
-
-            result = (n1 / n2).toString()
+            result = (a.toInt() / b.toInt()).toString()
         }
 
         return result

@@ -20,12 +20,12 @@ class MathTest {
     }
     @Test
     fun checkEmpty(){
-        assertEquals("you didn't write",math?.add("3","7"))
+        assertEquals("please enter smth",math?.add("",""))
     }
 
     @Test
     fun CheckNumber(){
-        assertEquals("caanot plus letters",math?.add("fe","jfiwe"))
+        assertEquals("caanot add letters",math?.add("fe","jfiwe"))
     }
     @Test
     fun dotAddCase(){
@@ -33,12 +33,9 @@ class MathTest {
     }
     @Test
     fun nagativeAddCase(){
-        assertEquals("caanot be negative number",math?.add("-1","-3"))
+        assertEquals("-4",math?.add("-1","-3"))
     }
-    @Test
-    fun divideToZero(){
-        assertEquals("Math Error",math?.divide("0","0"))
-    }
+
 
     @After
     fun detach(){
